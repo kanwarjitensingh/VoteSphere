@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('Background.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(43, 41, 106, 0.642);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.849);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 100px auto 30px auto;
+}
+
+.content-section {
+    width: 60%;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.image-section {
+    width: 35%;
+    text-align: right;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 20px 40px rgba(139, 24, 255, 0.3);
+}
+
+.significance-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.significance-image {
+    width: 40%;
+}
+
+.significance-image img {
+    max-width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 20px 40px rgba(112, 2, 255, 0.3);
+}
+
+.significance-text {
+    width: 55%;
+    padding-left: 20px;
+}
+
+.significance-text h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.significance-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.lower-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.lower-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card {
+    width: 30%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.card h4 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.initiative-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    margin: 50px auto;
+    border-radius: 8px;
+}
+
+.initiative-section h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.initiative-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+#vote:hover {
+    background-color: #4442a1;
+}
+
+#vote{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 250px ;
+    height:200px ;
+    border-radius: 4px ;
+    text-emphasis-color: #000000 ;
+    text-shadow: #000000;
+    font-size: 19px;
+    font-weight: bold;
+}

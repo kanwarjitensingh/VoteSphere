@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green House - Voting</title>
+    <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            background-image: url('Background.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 100px auto; /* Added margin to avoid overlap with header */
+            padding: 30px;
+            background-color: rgba(11, 240, 30, 0.585);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-align: center;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .candidates {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .candidate {
+            width: 30%;
+            max-width: 250px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .candidate-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0 , 0.2);
+        }
+
+        .candidate-name {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .candidate-vote-button {
+            background-color: #49278b; /* Button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .candidate-vote-button:hover {
+            background-color: #3e8e41; /* Darker button color on hover */
+        }
+
+        .confirmation {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .end-vote-button {
+            background-color: #d9534f; /* End vote button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .end-vote-button:hover {
+            background-color: #a83430; /* Darker color on hover */
+        }
+    </style>
+    <script>
+        let voteSelected = false;
+
+        function toggleVote(button) {
+            button.classList.toggle('active');
+            voteSelected = document.querySelectorAll('.candidate-vote-button.active').length > 0;
+        }
+
+        function endVote() {
+            const confirmCheckbox = document.getElementById('confirm-vote');
+            if (voteSelected && confirmCheckbox.checked) {
+                // You can send the vote to the server here if needed
+                window.location.href = 'redirecting.html'; // Redirect after confirmation
+            } else {
+                alert('Please select a candidate and confirm your vote.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Green House</h1>
+        <div class="candidates">
+            <div class="candidate">
+                <img src="candidate1.png" alt="Candidate 1" class="candidate-image">
+                <div class="candidate-name">Michael</div>
+                <form action="submit_vote.php" method="POST" onsubmit="toggleVote(this.querySelector('.candidate-vote-button'));">
+                    <input type="hidden" name="candidate_name" value="Michael">
+                    <button type="submit" class="candidate-vote-button">Vote for Michael</button>
+                </form>
+            </div>
+            <div class="candidate">
+                <img src="candidate2.png" alt="Candidate 2" class="candidate-image">
+                <div class="candidate-name">Joseph</div>
+                <form action="submit _vote.php" method="POST" onsubmit="toggleVote(this.querySelector('.candidate-vote-button'));">
+                    <input type="hidden" name="candidate_name" value="Joseph">
+                    <button type="submit" class="candidate-vote-button">Vote for Joseph</button>
+                </form>
+            </div>
+            <div class="candidate">
+                <img src="candidate3.png" alt="Candidate 3" class="candidate-image">
+                <div class="candidate-name">Lukas</div>
+                <form action="submit_vote.php" method="POST" onsubmit="toggleVote(this.querySelector('.candidate-vote-button'));">
+                    <input type="hidden" name="candidate_name" value="Lukas">
+                    <button type="submit" class="candidate-vote-button">Vote for Lukas</button>
+                </form>
+            </div>
+        </div>
+        <div class="confirmation">
+            <input type="checkbox" id="confirm-vote" />
+            <label for="confirm-vote">Are you sure with your vote?</label>
+            <br>
+            <button class="end-vote-button" onclick="endVote()">End Vote</button>
+        </div>
+    </div>
+</body>
+</html>

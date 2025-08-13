@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('Background.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(43, 41, 106, 0.642);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+#vote:hover {
+    background-color: #4442a1;
+}
+
+#vote{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 120px ;
+    height:30px ;
+    border-radius: 4px ;
+    text-emphasis-color: #000000 ;
+    text-shadow: #000000;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.849);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 100px auto 30px auto;
+    
+}
+
+.about-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+    
+}
+
+.about-content h1 {
+    font-size: 2rem;
+    margin-bottom: 60;
+    color: #141215;
+}
+
+.about-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color:#555;
+}
+
+.about-content ul {
+    padding-left: 20px;
+    margin-top: 40px; 
+    margin-bottom: 40px;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+}
+
+.image-section {
+    width: 70%;
+    text-align: right;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 20px 40px rgba(139, 24, 255, 0.3);
+}

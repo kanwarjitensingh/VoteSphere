@@ -1,0 +1,3 @@
+http://localhost/VoteSphere/
+
+to see votes :- http://localhost/phpmyadmin/
