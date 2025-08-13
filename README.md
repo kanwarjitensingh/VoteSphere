@@ -234,8 +234,26 @@ The system follows a structured data flow:
 - **Start/End Session**: Admin controls voting periods
 
 ## 📸 Screenshots
+### Main Landing Page
+![VoteSphere Homepage](screenshots/homepage.png)
+![VoteSphere Homepage](screenshots/homepage_2.png)
+*Beautiful homepage with smart voting system overview and modern design*
 
-### Main Interface
+### About Us Page
+![About Page](screenshots/about-page.png)
+*Comprehensive information about VoteSphere's mission and features*
+
+### Voter Registration
+![Voting Registration Form](screenshots/voting-form.png)
+*Simple and secure voter registration with house color selection*
+
+### Voting Interface
+![Voting Interface](screenshots/voting-interface.png)
+*Clean candidate selection interface with confirmation system*
+
+### Vote Confirmation
+![Thank You Page](screenshots/thank-you-page.png)
+*Professional vote confirmation with automatic redirect*
 
 
 ## 🤝 Contributing
